@@ -1,0 +1,14 @@
+{
+  "required" : [ "Input:input_user_name" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Input:input_user_name" : {
+      "title" : "input_user_name",
+      "description" : "The user will enter its name that will be used to generate the LEGO Master Builder name",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

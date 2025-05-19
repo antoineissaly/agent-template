@@ -1,0 +1,21 @@
+{
+  "required" : [ "nbr_builders", "nbr_pieces" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "nbr_builders" : {
+      "title" : "nbr_builders",
+      "description" : "Number of builders",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "nbr_pieces" : {
+      "title" : "nbr_pieces",
+      "description" : "Number of pieces",
+      "lightning:type" : "lightning__numberType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

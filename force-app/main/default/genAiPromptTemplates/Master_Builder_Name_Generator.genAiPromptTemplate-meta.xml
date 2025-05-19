@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>EegJcT77glqM+S5QR1T4qnhuPqk63LSxTjtp+sCEyvA=_1</activeVersionIdentifier>
+    <description>Your role is to help the user generate its LEGO Master Builder name</description>
+    <developerName>Master_Builder_Name_Generator</developerName>
+    <masterLabel>Master Builder Name Generator</masterLabel>
+    <templateVersions>
+        <content>Using the %%USER_NAME%%, generate a funny and creative &quot;LEGO master builder name&quot; that sound similar to the name and perhaps incorporate it.
+Send only the output, not the reasoning.
+
+%%USER_NAME%% = {!$Input:input_user_name}
+</content>
+        <inputs>
+            <apiName>input_user_name</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>input_user_name</masterLabel>
+            <referenceName>Input:input_user_name</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>EegJcT77glqM+S5QR1T4qnhuPqk63LSxTjtp+sCEyvA=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

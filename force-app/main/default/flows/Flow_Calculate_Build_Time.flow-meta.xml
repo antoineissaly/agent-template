@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Calculate how long it will take to build a LEGO set based on the number of pieces and number of builders</description>
+        <name>Build_Time_Calculator</name>
+        <label>Build Time Calculator</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>ProjectBuildTimeCalculator</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Output_the_build_hours</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>numberOfBuilders</name>
+            <value>
+                <elementReference>nbr_builders</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>numberOfPieces</name>
+            <value>
+                <elementReference>nbr_pieces</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ProjectBuildTimeCalculator</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Output the number of build hours</description>
+        <name>Output_the_build_hours</name>
+        <label>Output the build hours</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>nbr_hours</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Build_Time_Calculator.estimatedTimeInHours</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>This flow calculate the build time in hours that it takes depending on the number of pieces and the number of builders</description>
+    <environments>Default</environments>
+    <interviewLabel>Flow Calculate Build Time {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow Calculate Build Time</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Build_Time_Calculator</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Number of builders</description>
+        <name>nbr_builders</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+    <variables>
+        <description>Number of hours to build</description>
+        <name>nbr_hours</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Number of pieces</description>
+        <name>nbr_pieces</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+</Flow>

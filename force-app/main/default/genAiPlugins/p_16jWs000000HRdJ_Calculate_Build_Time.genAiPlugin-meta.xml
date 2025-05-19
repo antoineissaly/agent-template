@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is selected when a user needs to estimate the time required to build a LEGO set based on the number of pieces and the number of builders.</description>
+    <developerName>p_16jWs000000HRdJ_Calculate_Build_Time</developerName>
+    <genAiFunctions>
+        <functionName>Flow_Calculate_Build_Time</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Confirm with the user the number of pieces and the number of builders.</description>
+        <developerName>instruction_confirmwit0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_confirmwit0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the query is about estimating build time, use the Flow Calculate Build Time action.</description>
+        <developerName>instruction_ifthequery1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthequery1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Render the response in markdown including emojis</description>
+        <developerName>instruction_renderther2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_renderther2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Calculate Build Time</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only estimate the build time for a LEGO set by calculating based on the number of pieces and builders provided by the user. For that always use the action Flow Calculate Build Time.</scope>
+</GenAiPlugin>

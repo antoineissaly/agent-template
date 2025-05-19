@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Your role is to help the user generate its LEGO Master Builder name</description>
+    <invocationTarget>Master_Builder_Name_Generator</invocationTarget>
+    <invocationTargetType>generatePromptResponse</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
+    <masterLabel>Master Builder Name Generator</masterLabel>
+    <progressIndicatorMessage>Finding your inner builder</progressIndicatorMessage>
+</GenAiFunction>

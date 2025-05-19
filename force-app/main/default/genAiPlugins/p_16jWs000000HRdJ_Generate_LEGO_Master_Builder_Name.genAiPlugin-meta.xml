@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic is chosen when a user wants to create a personalized LEGO Master Builder name.</description>
+    <developerName>p_16jWs000000HRdJ_Generate_LEGO_Master_Builder_Name</developerName>
+    <genAiFunctions>
+        <functionName>Master_Builder_Name_Generator</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If the query is about generating a LEGO Master Builder name, use the Generate LEGO Master Builder Name action.</description>
+        <developerName>instruction_ifthequery0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthequery0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask the user to enter their names and use it as an input for the available action.</description>
+        <developerName>instruction_asktheuser1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_asktheuser1</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Generate LEGO Master Builder Name</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to only generate a unique LEGO Master Builder name for the user based on their preferences.</scope>
+</GenAiPlugin>
